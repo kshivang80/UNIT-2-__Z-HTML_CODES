@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    #container{
+      display:flex;
+      margin-top: 30px;
+      gap:30px;
+      width:80%;
+      flex-wrap: wrap;
+    }
+    body{
+      background-color: rgb(183, 180, 180);
+  }
+  #report>div{
+    width:25%;
+    background-color: white;
+   
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <input id="name" type="text" placeholder="Name" />
+        <input id="age" type="number" placeholder="Age" />
+        <select id="gender">
+        <option>Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select>
+        <input id="email" type="text" placeholder="Email" />
+        <input id="mobile" type="number" placeholder="Mobile Number" />
+        <input id="submit" type="submit"  />
+
+    </form>
+    <div>
+        <div id="container"></div>
+    </div>
+</body>
+</html>
+
+
+<script>
+    var form=document.querySelector("#form")
+
+    document.addEventListener("submit", Myfunction)
+    function Myfunction(){
+        event.preventDefault();
+     
+
+        var elem={
+          PersonName:form.name.value,
+          PersonAge:form.age.value,
+          PersonGender:form.gender.value,
+          PersonEmail:form.email.value,
+          PersonMobile:form.mobile.value,
+        }
+        console.log(elem)
+        display(elem)
+    }
+
+function display(elem){
+    var box=document.createElement("div");
+
+    var Name=document.createElement("h2")
+    Name.innerText=elem. PersonName
+
+    var Age=document.createElement("h3")
+    Age.innerText=elem. PersonAge
+
+    var Gender=document.createElement("h3")
+   Gender.innerText=elem.PersonGender
+
+   var Email=document.createElement("h3")
+   Email.innerText=elem.PersonEmail
+
+   var Number=document.createElement("h3")
+   Number.innerText=elem.PersonMobile
+
+ box.append(Name,Age,Gender,Email,Number)
+document.querySelector("#container").append(box)
+
+}
+
+  
+
+
+    
+</script>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#box{
+    height: 600px;
+    width:80%;
+    /* border:1px solid red; */
+    margin:auto;
+    margin-top: 80px;
+}
+#container{
+display:grid;
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(1,600px);
+gap:25px;
+}
+#container>div{
+    /* border:1px solid green; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+#container>div>img{
+    height:70%;
+    width:100%
+}
+button{
+    margin-top:-180px;
+}
+div>div>h2{
+    font-size: 25px;
+    margin-left: 12px;
+    vertical-align: middle;
+    /* color: #878787; */
+    display: inline-block;
+    margin-top: -5px;
+    
+}
+
+#green{
+    color:green;
+}
+.cut{
+    text-decoration:line-through;
+    color:gray;
+}
+div>p{
+    color:gray;
+    font-size: 22px;
+    margin-top:-5px;
+    margin-left:14px;
+}
+#small{
+    color:gray;
+    font-size:20px;
+}
+#container {
+  position: relative;
+  font-family: Arial;
+  
+}
+.best{
+    height:40px;
+    width:8%;
+    position: absolute;
+ margin-top:-50px;
+  
+  background-color:white;
+  color: black;
+  text-align: center;
+  border-radius:8px;
+  margin-left:10px;
+  padding-left: - 10px;
+  padding-right: 10px;
+  
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+} 
+.yes{
+    height:40px;
+    width:8%;
+    position: absolute;
+ margin-top:-50px;
+  
+  background-color:white;
+  color: black;
+  text-align: center;
+  border-radius:8px;
+  margin-left:130px;
+  /* padding-left: - 10px;
+  padding-right: 10px;
+   */
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+/* img{
+    position: relative;
+}
+.best{
+    position:absolute;
+    display:flex;
+}
+.best>div{
+    background-color: white;
+    margin-left: 30px;
+    padding:10px 15px 10px 15px;
+} */
+
+
+</style>
+
+
+
+</head>
+<body>
+    <div id="box">
+        
+            <div id="container">
+                <div>
+                    <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img2.jpg">
+                    <di class="best">
+                        <div>
+                         <h5>BESTSELLER</h5>
+                        </div>
+                        <!-- <div>BESTSELLER</div>
+                        <div>OFFER</div> -->
+                        
+                    </di>
+                    <di class="yes">
+                       
+                        <div>
+                            <h5>OFFER</h5> 
+                        </div>
+                    </di>
+                   <h2>Pink Chick</h2>
+                   <P>Layers Party Dress -navy multi</P>
+                   <h2>$1,800</h2>
+                   <h2 class="cut">$2,895</h2>
+                   <h2 id="green">10% Off</h2>
+                   <p id="small">1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years</p>
+                </div>
+                <div>
+                    <img src="https://thumbs.dreamstime.com/b/young-girl-beach-flower-dress-path-79670990.jpg">
+                    <di class="best">
+                        <div>
+                         <h5>BESTSELLER</h5>
+                        </div>
+                        
+                    </di>
+                    <di class="yes">
+                       
+                        <div>
+                            <h5>OFFER</h5> 
+                        </div>
+                    </di>
+                    <h2>Thread & Button</h2>
+                    <P>Green Spagheetti Kurti and Sharara </P>
+                    <div> 
+                      <h2>$2,295</h2>
+                      <h2 class="cut">$2,895</h2>
+                      <h2 id="green">10% Off</h2>
+                      <p id="small">1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years</p>
+                   </div>
+                </div>
+                <div>
+                    <img src="https://rukminim2.flixcart.com/image/580/696/krp94sw0/kids-dress/j/u/0/15-16-years-kids312-sheetal-associates-original-imag5fr5hhrjkzmw.jpeg?q=50">
+                    <di class="best">
+                        <div>
+                         <h5>BESTSELLER</h5>
+                        </div>
+                        
+                    </di>
+                    <di class="yes">
+                       
+                        <div>
+                            <h5>OFFER</h5> 
+                        </div>
+                    </di>
+                    <h2>Fairiesforever</h2>
+                    <P>Yellow Leheriya Angrakha With Sharar</P>
+                    <h2>$1,440</h2>
+                    <h2 class="cut">$2,895</h2>
+                    <h2 id="green">10% Off</h2>
+                    <p id="small">1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years</p>
+                </div>
+             </div>
+    </div>
+</body>
+</html>

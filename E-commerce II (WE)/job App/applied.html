@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+   
+      <select id="sortNames" onchange="handleNamesort()">
+        <option value="">Sort By Names</option>
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+      </select>
+
+        <select  id="sortBySalary" onchange="handleSalarysort()">
+            <option value="">Sort By Salary</option>
+            <option value="HightoLow">High to Low</option>
+            <option value="LowtoHigh">Low to High</option>
+        </select>
+
+        <select  id="filterRole" onchange="handleFilter()">
+          <option >Filter Category</option>
+          <option value="FSD">FSD</option>
+          <option value="Frontend">FRONTEND</option>
+          <option value="Backend">BACKEND</option>
+      </select>
+
+ 
+
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Job applied</th>
+            <th>Salary expected</th>
+            <th>Add to bookmark</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+  <script>
+    //you need to code here
+
+var jobArr=JSON.parse(localStorage.getItem("jobList"));
+console.log(jobArr);
+
+ //reduce  find the total;
+ var sum=jobArr.reduce(function(acc,elem){
+      return acc+Number(elem.PersonSalary);
+    },0)
+    console.log(sum)
+
+displayData(jobArr);
+
+var bookMarkArr=JSON.parse(localStorage.getItem("bookmarks")) || []
+
+function displayData(data){
+
+  document.querySelector("tbody").innerHTML=""        // for sorting it will refresh automatic
+  data.forEach(function(elem){
+   // console.log(elem)
+  var tr=document.createElement("tr")
+
+  
+  var td1=document.createElement("td");
+  td1.innerText=elem.PersonName
+
+  var td2=document.createElement("td");
+  td2.innerText=elem.PersonEmail
+
+  var td3=document.createElement("td");
+  td3.innerText=elem.PersonRole
+
+  var td4=document.createElement("td");
+  td4.innerText=elem.PersonSalary
+
+  var td5=document.createElement("td");
+  td5.innerText="Bookmark";
+  td5.style.color="blue";
+  td5.style.cursor="pointer"
+  td5.addEventListener("click",function(){
+    
+    bookMarkFunction(elem)
+  })
+
+  tr.append(td1,td2,td3,td4,td5)
+ document.querySelector("tbody").append(tr);
+
+})
+}
+function  bookMarkFunction(elem){
+  //console.log(elem)
+  bookMarkArr.push(elem)
+  // console.log( bookMarkArr)
+
+  localStorage.setItem("bookmarks",JSON.stringify(bookMarkArr))
+}
+
+//*********START FUNCTION OF SORTING THE DATA *******************************
+
+ //second methed of (onchange)
+
+//document.querySelector("#sortNames").addEventListenerz("change" ,handleNamesort);
+
+
+function handleNamesort(){
+  // console.log("click me mere bhai")
+  var selected=document.querySelector("#sortNames").value;
+  //console.log(selected);
+
+  if(selected=="ascending"){
+    jobArr.sort(function(a,b){
+     // var x=a.PersonName.toUpparcase()   //for convert in uppar alphabet
+      //var y=a.PersonName.toLowercase()    // //for convert in lower alphabet
+      if(a.PersonName >b.PersonName){
+        return 1
+      }
+      if(a.PersonName < b.PersonName){
+        return -1
+      }
+      return 0;
+    })
+   // console.log(jobArr);
+    displayData(jobArr)
+  }
+  if(selected=="descending"){
+    jobArr.sort(function(a,b){
+      //var x=a.PersonName.toUpparcase()   //for convert in uppar alphabet
+     // var y=a.PersonName.toLowercase()    // //for convert in lower alphabet
+      if(a.PersonName >b.PersonName){
+        return -1
+      }
+      if(a.PersonName < b.PersonName){
+        return 1
+      }
+      return 0;
+    })
+    // console.log(jobArr);
+    displayData(jobArr)
+    
+  }
+
+  }
+
+
+function handleSalarysort(){
+  
+  var selected=document.querySelector("#sortBySalary").value;
+   if(selected==="HightoLow"){
+     
+    jobArr.sort(function(a,b){
+      return b.PersonSalary - a.PersonSalary
+    })
+   // console.log(jobArr)
+   displayData(jobArr)
+   }
+   if(selected==="LowtoHigh"){
+     
+     jobArr.sort(function(a,b){
+       return a.PersonSalary - b.PersonSalary
+     })
+    // console.log(jobArr)
+    displayData(jobArr)
+    }
+}
+ 
+function  handleFilter(){
+  var selected=document.querySelector("#filterRole").value;
+  console.log(selected)
+
+  var filteredList=jobArr.filter(function(elem){
+    return elem.PersonRole===selected;
+  })
+//console.log(filteredList)
+displayData(filteredList)
+}
+    
+  </script>
+    
+  </script>
+</html>

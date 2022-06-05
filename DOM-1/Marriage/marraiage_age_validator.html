@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="age">
+    
+<select id="gender">
+       <option value="">---</option>
+       <option value="Male">M</option>
+       <option value="Female">F</option>
+
+</select>
+<br>
+<br>
+<button onclick="findAge()"   id="Down" >CLICK</button>
+
+
+
+</body>
+</html>
+
+<script>
+
+function findAge(){
+var gen=document.getElementById("gender").value
+var age=document.getElementById("age").value
+var current_year=2022;
+var X= Math.abs(age-current_year)
+if(X>21 && gen==="Male")
+{
+    var Namefirst=document.getElementById("Down").value="Yes You are eligible‌ for marriage"
+    alert(Namefirst)
+}
+else if(X<21 && gen==="Male")
+{
+    var Namefirst=document.getElementById("Down").value=" You are Not eligible‌ for marriage"
+    alert(Namefirst)
+}
+if(X>18 && gen==="Female")
+{
+    var Namefirst=document.getElementById("Down").value="Yes You are eligible‌ for marriage "
+    alert(Namefirst)
+}
+else if(X<18 && gen==="Female")
+{
+    var Namefirst=document.getElementById("Down").value=" You are Not eligible‌ for marriage"
+    alert(Namefirst)
+}
+
+
+
+
+
+}
+
+
+</script>

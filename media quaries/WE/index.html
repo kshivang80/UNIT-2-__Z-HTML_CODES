@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #container{
+        display:grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 90px 200px;
+        gap:30px;
+        grid-template-areas:
+        "nav nav nav nav"
+        "box1 box2 box3 box4 ";
+
+    }
+/* #container>div{
+    border: 1px solid green;
+} */
+#container>div:nth-child(1){
+    grid-area:nav;
+    background-color: yellow;
+}
+#container>div:nth-child(2){
+    grid-area:box1;
+    background-color:red;
+}
+#container>div:nth-child(3){
+    grid-area:box2;
+    background-color: rgb(61, 255, 47);
+}
+#container>div:nth-child(4){
+    grid-area:box3;
+    background-color:blue;
+}
+#container>div:nth-child(5){
+    grid-area:box4;
+    background-color: gray;
+}
+@media all and (min-width:451px) and (max-width:750px){
+    #container{
+        /* display:grid; */
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 90px 200px 200px;
+        /* gap:30px; */
+        grid-template-areas:
+        "nav nav"
+        "box1 box3" 
+        "box2 box4";
+
+    }
+}
+@media all and (min-width:66px) and (max-width:450px){
+    #container{
+        /* display:grid; */
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:90px 200px 200px 200px 200px;
+        /* gap:30px; */
+        grid-template-areas:
+        "nav"
+        "box1" 
+        "box4"
+        "box2"
+        "box3";
+
+    }
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+    <div id="container">
+    <div>Navigation</div>
+    <div>Box1</div>
+    <div>Box2</div>
+    <div>Box3</div>
+    <div>Box4</div>
+      </div>
+</body>
+</html>

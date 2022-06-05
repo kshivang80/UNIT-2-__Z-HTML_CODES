@@ -1,0 +1,18 @@
+
+.nav{
+    display:flex;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    background-color: rgb(42, 42, 140);
+    color:rgb(240, 237, 237)
+    }
+    #hello{
+        display:flex;
+        /* margin: auto; */
+        margin-left: 55%;
+        gap: 30px;
+       
+    }
+    a{
+        color:rgb(217, 211, 211)
+    }

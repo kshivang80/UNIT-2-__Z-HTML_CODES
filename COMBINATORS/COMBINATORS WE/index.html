@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE COMBINATORS</title>
+    <style>
+#box{
+    height:auto;
+    width:40%;
+    /* border:1px solid red; */
+    margin:auto;
+    text-align: center;
+   
+}
+#box >h1{
+font-size:50px;
+text-align: center;
+color: light rgb(17, 43, 36);
+}
+#box >p{
+color:gray;
+margin-top:-10px;
+font-size: 20px;
+}
+#box1{
+    height:auto;
+    width:70%;
+    /* border:1px solid red; */
+    margin:auto;
+    margin-top:60px;
+    display:flex;
+
+}
+#box1 > div{
+    height:100%;
+    width:30%;
+    /* border:1px solid teal; */
+    margin:auto;
+    text-align: center;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    border-radius: 30px;
+}
+#box1>div:nth-child(1)>h1{
+    color:green;
+
+}
+#box1>div:nth-child(2)>h1{
+    color:orange;
+
+}
+#box1>div:nth-child(3)>h1{
+    color:rgb(50,50,184);
+
+}
+#box1>div>h1+p {
+    font-style: italic;
+    margin-top:-15px;
+   
+}
+p+p{
+    padding:0px 25px 0px 25px;
+    font-size: 20px;
+    line-height: 25px;
+    color:gray
+}
+button{
+    border:1px solid rgb(28, 28, 206);
+    color:rgb(28, 28, 206);
+    background-color: white;
+    border-radius: 10px;
+    padding:15px 45px 15px 45px;
+    font-size: 20px;
+    margin-top:30px;
+    font-weight: bold;
+
+}
+button:hover{
+    color:white;
+    background-color:rgb(28, 28, 206); ;
+}
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+<div id="box">
+    <h1>Choose a plan that right for your business</h1>
+    <p class="para">We collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</p>
+</div>
+<div id="box1">
+<div class="box2">
+    <h2>Starter Plan</h2>
+    <h1>Free</h1>
+    <p>Per month</p>
+    <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+    <button>Start Now</button>
+</div>
+<div class="box2">
+    <h2>Business Plane</h2>
+    <h1>$39.00</h1>
+    <p>Per month</p>
+    <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+    <button>Start Now</button>
+</div>
+<div class="box2">
+    <h2>Premium Plan</h2>
+    <h1>$59.00</h1>
+    <p>Per month</p>
+    <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+    <button>Start Now</button>
+</div>
+
+
+
+
+</div>
+
+</body>
+</html>

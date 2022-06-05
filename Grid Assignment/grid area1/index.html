@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid area 1</title>
+<style>
+   #box{
+       height:500px;
+       width:100%;
+       /* border:1px solid green; */
+      } 
+#continer{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,150px);
+    gap:25px;
+    margin-top: 100px;
+    /* margin:auto; */
+    padding: 50px;
+    margin-left: 30px;
+    column-gap:40px;
+    grid-template-areas:
+    "bhai bhai bhai1  bhai1"
+    "bhai2 bhai3 bhai3  bhai3"
+    "bhai4 bhai4 bhai4  bhai4"
+}
+#continer>div{
+    /* border:1px solid red; */
+    /* width:60%; */
+    
+ 
+}    
+#continer>div:nth-child(1){
+    grid-area: bhai;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(2){
+    grid-area: bhai1;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(3){
+    grid-area: bhai2;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(4){
+    grid-area: bhai3;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(5){
+    grid-area: bhai4;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(6){
+    grid-area: bhai5;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(7){
+    grid-area: bhai6;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(8){
+    grid-area: bhai7;
+    background-color: rgb(66, 64, 64);
+} 
+#continer>div:nth-child(9){
+    grid-area: bhai8;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(10){
+    grid-area: bhai9;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(11){
+    grid-area: bhai10;
+    background-color: rgb(66, 64, 64);
+}
+#continer>div:nth-child(12){
+    grid-area: bhai11;
+    background-color: rgb(66, 64, 64);
+} 
+#continer>div{
+    color:white;
+    font-size: 200%;
+    
+    padding-left:25px;
+   border-radius: 20px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+   <div id="box">
+    <div id="continer">
+        <div>
+            <H1>A</H1>
+        </div>
+       
+        <div>
+            <H1>B</H1>
+        </div>
+        <div>
+            <H1>C</H1>
+        </div>
+        <div>
+            <H1>D</H1>
+        </div>
+        <div>
+            <H1>E</H1>
+        </div>
+      
+       
+       
+    </div>
+
+</div>
+</body>
+</html>

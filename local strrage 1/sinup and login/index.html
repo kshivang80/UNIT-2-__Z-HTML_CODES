@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        #container{
+            width:30%;
+            height:60%;
+            margin:auto;
+            /* border: 1px solid red; */
+            text-align: center;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            
+        }
+        p{
+            margin-left: -100px;
+            font-weight: bold;
+            /* font-size: 130%; */
+        }
+        #hi{
+            margin-left: -130px;
+        }
+        button{
+            margin-top: 20px;
+           
+        }
+        a{
+          text-decoration: none;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        #bhai{
+            margin-top: 5px;
+            margin-left: 25px;;
+        }
+        #one{
+            width:70%;
+            height:auto;
+            /* border:1px solid red; */
+            margin-top: 30px;
+            /* margin-left: 100px; */
+            margin:auto;
+            padding: 20px;
+           
+           
+        }
+        .two{
+            margin-top: -20px;
+        }
+        #one>p{
+           margin-left: 40px;
+           font-size: 80%;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Masai</h1>
+    <form id="form">
+    <div id="container">
+   
+    <h2>Sign Up</h2>
+    <p>Full name</p>
+    <input id="name" type="text" placeholder="Enter Your Name" required>
+    <p id="hi" >Email</p>
+    <input id="email" type="text" placeholder="Enter Your Email" required>
+    <p>Password</p>
+    <input id="password" type="text" placeholder="Enter Your Password" required>
+    <br>
+    <br>
+    <input type="submit" placeholder="SignUp"  onclick="myFunction()"/>
+    <br>
+    <div id="one">
+        <p >By signing up, I accept the Masai School Terms of Service and acknowledge the Privacy Policy</p>
+      
+    </div>
+    <p>Already have an account?   <button id="LOGIN" > <a href="login.html">LOGIN</a></button></p>  
+</form>
+
+
+</div>
+
+
+</body>
+</html>
+
+<script>
+    var form=document.querySelector("form");
+
+form.addEventListener("submit",function(event){
+    event.preventDefault();
+
+    var data={
+        name:form.name.value,
+        email:form.email.value,
+        password:form.password.value,
+    }
+  
+    
+    localStorage.setItem("userData",JSON.stringify(data))
+    alert("SignUp Successful");
+    window.location.href="login.html"
+
+   
+   
+})
+
+// function myFunction() {
+  
+//         alert("SignUp Successful");
+//         window.location.href="login.html"
+
+// }
+
+
+</script>

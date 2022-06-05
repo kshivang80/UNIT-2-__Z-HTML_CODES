@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   #box{
+       display:flex;
+       /* border:1px solid red; */
+       height:100px;
+       margin-top: 40px;
+   }
+.one{
+    height:100%;
+    width:28%;
+    /* border:1px solid green; */
+    display: flex;
+}
+.one>div{
+    height:100%;
+    width:25%;
+    /* border:1px solid rgb(185, 21, 48); */
+}
+
+.two{
+    height:100%;
+    width:70%;
+    /* border:1px solid green; */
+    display: flex;
+}
+.two>div{
+    height:100%;
+    width:60%;
+    /* border:1px solid black; */
+    text-align: center;
+   
+  
+}
+img{
+    margin-top: 30px;
+}
+.two>div>div{
+    margin-top: 30px;
+    padding: 10px 10px 10px 10px;
+}
+
+/* button{
+    padding: 15px 15px 15px 15px;
+    margin-top: -150%;
+    border-radius: 10px;
+    border: 2px solid red;
+    color:red;
+} */
+
+
+.bhai>div{
+    width:50%;
+    height:30%;
+    border: 2px solid red;
+    border-radius: 10px;
+   margin-left: 20px;
+   padding-bottom: 12px;
+   background-color: lightcoral;
+}
+.bhai>div:hover{
+    background-color: rgb(210, 84, 33);
+}
+.bhai>div>a:hover{
+    color: rgb(210, 84, 33);
+}
+.two>div+p{
+    color:red;
+   
+  
+}
+/* .bhai>div>a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+} */
+a {
+ color:black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+    color:red;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+    </style>
+</head>
+<body>
+    <div id="box">
+            <div class="one">
+                <div></div>
+                <div>
+                   <img src="https://www.masaischool.com/img/navbar/logo.svg" />
+                </div>
+            </div>
+            <div class="two">
+                <div>
+                <div><a href="https://www.masaischool.com/">COURSES</a></div>
+                    <!-- <a href="https://www.masaischool.com/">COURSES</a> -->
+                </div>
+                <div>
+                    <div>  <a href="https://www.masaischool.com/fees/">FEES & ISA </a></div>
+                    <!-- <a href="https://www.masaischool.com/fees/">FEES & ISA </a> -->
+                </div>
+                <div>
+                    <div><a href="https://www.masaischool.com/about/">ABOUT US/<a></div>
+                    <!-- <a href="https://www.masaischool.com/about/">ABOUT US/a> -->
+                </div>
+                <div>
+                    <div> <a href="https://www.masaischool.com/hire-masai-grads/">HIRE FROM US</a></div>
+                    <!-- <a href="https://www.masaischool.com/hire-masai-grads/">HIRE FROM US</a> -->
+                </div>
+                <div>
+                    <div> <a href="https://www.masaischool.com/faq/#general.">FAQ</a></div>
+                    <!-- <a href="https://www.masaischool.com/faq/#general.">FAQ</a> -->
+                </div>
+                <div>
+                    <div>   <a href="https://www.masaischool.com/events/">EVENTS</a></div>
+                    <!-- <a href="https://www.masaischool.com/events/">EVENTS</a> -->
+                </div>
+                <div class="bhai">
+                    <div>
+                        <a  href="https://sso.masaischool.com/signin/?returnTo=https://dashboard.masaischool.com/#/">LOGIN</a>
+                       
+                    </div>
+                   
+                </div>
+               
+            </div>
+           
+    </div>
+</body>
+</html>

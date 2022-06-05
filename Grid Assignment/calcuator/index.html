@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+#container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-template-rows:repeat(5,70px);
+    gap:30px;
+    width:50%;
+    margin:auto;
+    margin-top:80px;
+    grid-template-areas:
+    " one one one one ";
+    justify-content: center;
+    
+}
+#container>div{
+    /* border:1px solid red; */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius:10px;
+    font-size: 280%;
+    text-align: center;
+}
+
+
+#box{
+    height:700px;
+    /* border:1px solid green; */
+    /* margin-top:200px; */
+    width:50%;
+    margin:auto;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius:30px;
+    
+    
+}
+#box>h1{
+    text-align:center;
+   font-size: 340%;
+   color:teal;
+  
+}
+#container>div:nth-child(1){
+    grid-area:one
+
+   
+}
+#container>div:nth-child(5){
+    background-color: #000000;
+    color:whitesmoke;
+    font-size: 280%;
+    text-align:center;
+    /* margin-bottom:10px ; */
+    font-style: bold;
+  
+}
+#container>div:nth-child(9){
+    background-color: black;
+    font-size: 360%;
+    color:whitesmoke;
+    text-align:center;
+}
+#container>div:nth-child(13){
+    background-color: black;
+    font-size: 260%;
+    color:whitesmoke;
+    text-align:center;
+}
+#container>div:nth-child(16){
+    background-color: black;
+    font-size: 280%;
+    color:whitesmoke;
+    text-align:center;
+}
+#container>div:nth-child(17){
+    background-color: black;
+    font-size: 280%;
+    color:whitesmoke;
+    text-align:center;
+
+}
+#container>div:nth-child(14){
+    background-color: red;
+    font-size: 280%;
+    color:whitesmoke;
+    text-align:center;
+}
+#container>div:hover{
+    color:white;
+    background-color:rgb(28, 28, 206); ;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Masai Calculator</h1>
+    <div id="container">
+           <div></div>
+           <div>1</div>
+           <div>2</div>
+            <div>3</div>
+            <div>+</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>X</div>
+            <div>C</div>
+            <div>0</div>
+            <div>=</div>
+            <div>/</div>
+          
+
+    </div>
+</div>
+</body>
+</html>

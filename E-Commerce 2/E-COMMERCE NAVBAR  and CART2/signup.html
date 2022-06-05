@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+      
+<form id="form">
+       <h1>Create Account</h1>
+       <p>*Full Name </p>
+       <input type="text" id="name" required>
+
+       <p>*Email Address</p>
+       <input type="email" id="email" required>
+
+       <p>*Password</p>
+       <input type="password" id="pass" required>
+
+       
+         
+       <input type="submit" id="submit" value="Signup">
+
+  
+
+</form>
+</body>
+</html>
+
+<script>
+   
+   document.querySelector("form")
+    form.addEventListener("submit",myfun)
+
+   function myfun(){
+       event.preventDefault()
+      var data={
+           Name:form.name.value,
+           Email:form.email.value,
+           Password:form.pass.value
+ 
+       
+   }
+
+
+ localStorage.setItem("details",JSON.stringify(data))
+ alert("Signup Successfull")
+       window.location.href = "signin.html"
+
+} 
+    
+</script>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-template-rows:repeat(1,410px) ;
+    gap:30px;
+   
+}
+
+#container>div{
+    /* border:1px solid green; */
+    margin-top: 50px;
+    width:80%;
+    margin-left: 45px;
+   text-align: center;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+#box{
+    height:auto;
+    width:40%;
+    /* border:1px solid red; */
+    margin:auto;
+    text-align: center;
+}
+#box >h1{
+font-size:50px;
+text-align: center;
+color: light rgb(17, 43, 36);
+}
+#container>div:nth-child(1)>h1{
+    color:green;
+
+}
+#container>div:nth-child(2)>h1{
+    color:orange;
+
+}
+#container>div:nth-child(3)>h1{
+    color:rgb(50,50,184);
+
+}
+#container>div>h1+p {
+    font-style: italic;
+    margin-top:-15px;
+   
+}
+p+p{
+    padding:15px 40px 15px 40px;
+    font-size: 20px;
+    line-height: 25px;
+    color:gray
+}
+button{
+    border:1px solid rgb(28, 28, 206);
+    color:rgb(28, 28, 206);
+    background-color: white;
+    border-radius: 10px;
+    padding:15px 45px 15px 45px;
+    font-size: 20px;
+    margin-top:px;
+    font-weight: bold;
+
+}
+button:hover{
+    color:white;
+    background-color:rgb(28, 28, 206); ;
+}
+#box>p{
+    color:gray;
+    font-size: 20px;
+}
+@media all and (min-width:451px) and (max-width:751px){
+    #container{
+      
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows:repeat(2,auto);
+        gap:20px;
+        width:100%;
+    }
+    #container>div{
+   width:100%;
+   }
+   #box{
+       width:90%;
+   }
+   }
+
+ @media all and (min-width:100px) and (max-width:451px){
+    #container{
+      
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows:repeat(3,auto);
+        gap:20px;
+        width:100%;
+    }
+    #container>div{
+   width:80%;
+    }
+   #box{
+       width:90%;
+   }
+   #box>h1{
+       font-size: 30px;
+   }
+   #box>p{
+       font-size:20px;
+       line-height: 20px;
+       margin-top: 20px;
+   }
+  
+
+   }
+
+  
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Choose a plane that for your business</h1>
+        <p class="para">We collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</p>
+    </div>
+     <div id="container">
+
+            <div>
+                <h2>Starter Plan</h2>
+                <h1>Free</h1>
+                <p>Per month</p>
+                <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+                <button>Start Now</button>
+            </div>
+            <div>
+                <h2>Business Plane</h2>
+                <h1>$39.00</h1>
+                <p>Per month</p>
+                <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+                <button>Start Now</button>
+            </div>
+            <div>
+                <h2>Premium Plan</h2>
+                <h1>$59.00</h1>
+                <p>Per month</p>
+                <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website.</p>
+                <button>Start Now</button>
+            </div>
+      </div>
+</body>
+</html>

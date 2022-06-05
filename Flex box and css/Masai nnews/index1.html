@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+#bhai{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,300px);
+    gap:30px;
+    /* margin:auto; */
+    /* justify-content: center; */
+    grid-template-areas: 
+    " ram1 ram2 ram3"
+    "ram4 ram5 ram6";
+
+}
+#bhai>div{
+    border:1px solid green;
+  
+}
+#bhai>div:nth-child(1){
+    background-color: blue;
+    grid-area: ram1;
+}
+#bhai>div:nth-child(2){
+    background-color:black;
+    grid-area: ram2;
+}
+#bhai>div:nth-child(3){
+    background-color: green;
+    grid-area: ram3;
+}
+#bhai>div:nth-child(4){
+    background-color:red;
+    grid-area: ram4;
+}
+#bhai>div:nth-child(5){
+    background-color:yellow;
+    grid-area: ram5;
+}
+#bhai>div:nth-child(6){
+    background-color:violet;
+    grid-area: ram6;
+}
+
+@media all and (min-width:451px) and (max-width:751px){
+    #bhai{
+   
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,300px);
+    gap:30px;
+   width:100%;
+    grid-template-areas: 
+    " ram1 ram1 "
+    "ram3 ram2 "
+    " ram5 ram6";
+
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="bhai">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>

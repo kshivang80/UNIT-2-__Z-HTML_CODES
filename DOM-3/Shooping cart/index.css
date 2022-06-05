@@ -1,0 +1,32 @@
+#container{
+display:flex;
+margin:auto;
+gap:20px;
+justify-content: center;
+}
+h3{
+    
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(126, 119, 119);
+    /* font-size: 150%; */
+    
+}
+
+h4{
+    
+    text-decoration: line-through;
+    color:gray;
+    margin-top: -46px;
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 120%;
+}
+h3+h3{
+    
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(57, 55, 55);
+    font-size: 150%;
+    
+}

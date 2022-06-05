@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <link rel="stylesheet" href="signup.css">
+ </head>
+
+ <body>
+     
+         <form id="form">
+            <h1>Login </h1>
+            <p>*Email Address</p>
+             <input type="email" id="email" required>
+             <p>*Password</p>
+             <input type="password" id="pass">
+             
+     <input type="submit"  id="submit" value="Login">
+
+       </form>
+  
+ </body>
+ </html>
+ <script>
+     var form = document.querySelector("form");
+
+        //for taking data from local strorage;
+        var details = JSON.parse(localStorage.getItem("details"));
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault()
+            var data = {
+                Email: form.email.value,
+                Password: form.pass.value,
+            }
+            console.log(data)
+            // condition check for data is present
+            if (details === null) {
+                alert("Please Create an Account");
+            }
+            else if (details.Email === data.Email && details.Password === data.Password) {
+                alert("Sign in Successful")
+                localStorage.setItem("signin", JSON.stringify(details))
+                window.location.href = "Mens.html"
+            }
+            else {
+                alert("User Does Not Exist")
+            }
+        })
+
+ </script>

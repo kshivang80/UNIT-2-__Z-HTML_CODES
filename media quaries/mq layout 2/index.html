@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:200px 400px 400px ;
+    gap:30px;
+    margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    grid-template-areas:
+    "ram ram"
+    "ram1 ram2";
+
+}
+#container>div{
+    
+    width:100%;
+   
+}
+#container>div:nth-child(1){
+    grid-area: ram;
+    background-color:yellow ;
+
+}
+#container>div:nth-child(2){
+    grid-area: ram1;
+    background-color:red ;
+}
+#container>div:nth-child(3){
+    grid-area: ram2;
+    background-color:green;
+}
+#container>div>h2{
+color:gray;
+font-size: 200%;
+
+}
+#a>h1{
+    font-size: 360%;
+    color:black;
+}
+#a{
+box-sizing: 300px;
+}
+@media all and (min-width:66px) and (max-width:550px){
+    #container{
+      
+       grid-template-columns:repeat(1,1fr) ;
+       grid-template-rows:100px 200px 200px ;
+       width:100%;
+       grid-template-areas:
+        "ram"
+        "ram1" 
+        "ram2"
+       
+      
+          }
+           #container>div{
+              width:100%;
+           }    
+
+    
+
+
+
+    </style>
+</head>
+<body>
+   
+    <div id="container">
+    <div id="a">
+        <h1>Navigation</h1>
+    </div>
+    <div id="b">
+        <h2>LEFT BOX</h2>
+    </div>
+    <div id="c">
+        <h2>RIGHT BOX</h2>
+    </div>
+   
+</div>
+</body>
+</html>

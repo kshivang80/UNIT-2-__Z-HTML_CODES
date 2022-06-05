@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div id="links">
+     <div><a href="index.html">Home</a></div>
+     <div><a href="applied.html">Applied jobs</a></div>
+     <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+   
+    <form action="" id="form">
+      <h2>Enter Your Application Details</h2>
+      <input placeholder="Enter Name" id="name" name="name" type="text" />
+      <input placeholder="Enter email" type="email" name="email" id="email" />
+      <select  id="role">
+        <option value="FSD">FSD</option>
+        <option value="Backend">Backend</option>
+        <option value="Frontend">Frontend</option>
+      </select>
+      <input id="salary"
+        type="number"
+        placeholder="Enter expected salary in lakhs per annum "
+      />
+      <input id="submit" type="submit" name="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    //you need to code here
+    document.querySelector("#form").addEventListener("submit", jobSubmit)
+    var jobArr=JSON.parse(localStorage.getItem("jobList")) || []    //for add member and not refresh
+    function jobSubmit(){
+      event.preventDefault();
+     
+
+      var jobObj={
+        PersonName:form.name.value,
+        PersonEmail:form.email.value,
+        PersonRole:form.role.value,
+        PersonSalary:form.salary.value,
+      }
+      // console.log(jobObj)
+      jobArr.push(jobObj)
+      //console.log(jobArr)
+      localStorage.setItem("jobList",JSON.stringify(jobArr));
+
+      //for redirect to applied jobs page
+      window.location.href="applied.html"
+
+ }
+ //second methed of (onchange)
+
+//document.querySelector("#sortNames").addEventListenerz("change" ,handleNamesort);
+
+
+function handleNamesort(){
+  // console.log("click me mere bhai")
+  var selected=document.querySelector("#sortNames").value;
+  //console.log(selected);
+
+  if(selected=="ascending"){
+    jobArr.sort(function(a,b){
+     // var x=a.PersonName.toUpparcase()   //for convert in uppar alphabet
+      //var y=a.PersonName.toLowercase()    // //for convert in lower alphabet
+      if(a.PersonName >b.PersonName){
+        return 1
+      }
+      if(a.PersonName < b.PersonName){
+        return -1
+      }
+      return 0;
+    })
+    console.log(jobArr);
+  }
+  if(selected=="descending"){
+    jobArr.sort(function(a,b){
+      //var x=a.PersonName.toUpparcase()   //for convert in uppar alphabet
+     // var y=a.PersonName.toLowercase()    // //for convert in lower alphabet
+      if(a.PersonName >b.PersonName){
+        return -1
+      }
+      if(a.PersonName < b.PersonName){
+        return 1
+      }
+      return 0;
+    })
+    console.log(jobArr);
+  }
+
+  }
+
+
+
+    
+  </script>
+</html>

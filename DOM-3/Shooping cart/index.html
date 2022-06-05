@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #container{
+display:flex;
+margin:auto;
+gap:20px;
+justify-content: center;
+}
+h3{
+    
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(126, 119, 119);
+    /* font-size: 150%; */
+    
+}
+
+h4{
+    
+    text-decoration: line-through;
+    color:gray;
+    margin-top: -46px;
+    margin-left: 100px;
+    font-weight: bold;
+    font-size: 120%;
+}
+h3+h3{
+    
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(57, 55, 55);
+    font-size: 150%;
+    
+}
+</style>
+</head>
+<body>
+    <div id="container"></div>
+    
+</body>
+</html>
+
+    <script >
+
+var data = [
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi1.jpg.pagespeed.ic.mkSk-Af1ka.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$25.00",
+        strikedOffPrice:"$95.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi2.jpg.pagespeed.ic.uBrpABaJqp.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },{
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi3.jpg.pagespeed.ic.iO_cFEPy2K.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    },
+    {
+        imgUrl:"https://preview.colorlib.com/theme/eiser/img/product/inspired-product/xi4.jpg.pagespeed.ic.kmiQW8I5wx.webp",
+        name:"LATEST MEN’S SNEAKER",
+        price:"$35.00",
+        strikedOffPrice:"$100.00"
+    }
+]
+
+data.map(function(elem){
+    var box=document.createElement("div");
+    
+    var photo=document.createElement("img")
+    photo.setAttribute("src",elem.imgUrl)
+    
+    var Name=document.createElement("h3")
+    Name.innerText=elem.name
+    
+    var Price=document.createElement("h3")
+    Price.innerText=elem.price
+    
+    var striked=document.createElement("h4")
+    striked.innerText=elem.strikedOffPrice
+    // data.map(function(elem){
+    //     var box=document.createElement("div");
+    //     var striked=document.createElement("h4")
+    //     striked.innerText=elem.strikedOffPrice
+    // })
+    
+    
+    box.append(photo,Name,Price,striked)
+    document.querySelector("#container").append(box)
+    
+     });
+
+
+
+    </script>

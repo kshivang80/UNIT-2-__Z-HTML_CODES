@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  *{
+      margin:0px;
+      padding:0px;
+  }
+  h1{
+      text-align: center;
+  }
+  
+  
+  #container{
+      margin:auto;
+      width:90%;
+    
+  }
+  body{
+      background-color: rgb(183, 180, 180);
+  }
+  #container>div:nth-child(1){
+      width:80%;
+      margin:auto;
+      background-color: white;
+      padding:40px 0px;
+  }
+  input,select{
+      display: block;
+      width:80%;
+      margin: 10px auto;
+      padding:1% 5px;
+  }
+  #container>div:nth-child(2){
+      width:100%;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 10px;
+  }
+  #product>div{
+      width:18%;
+      background-color: aliceblue;
+      margin-top: 20px;
+     
+  }
+  
+  
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    
+    <div>
+        <h1>Add Some Products</h1>
+        <form id="form">
+                <select  name="" id="category"    >
+                    <option value="">Select Category</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Furniture"> Furniture</option>
+                    <option value="Home Appliance">Home Appliance</option>
+                    <option value="Books">Books</option>
+                </select>    
+                <input id="Title" type="text" placeholder="product title" />
+                <input id="description" type="text" placeholder="product description" />
+                <input id="price" type="number" placeholder="product price" />
+                <input type="submit">
+        </form>
+    </div>
+     
+    <div id="product">
+       
+    </div>
+
+
+</div>
+</body>
+</html>
+
+<script>
+
+//Dom  Variable
+var form=document.querySelector("#form")
+var product=document.querySelector("#product")
+
+//all Function{
+    function display(data){
+      
+      var parent=document.createElement("div");
+      var heading=document.createElement("h2");
+      heading.innerText=data.category;
+
+      var Title=document.createElement("p");
+      Title.innerText=data.Title;
+
+      var description=document.createElement("p")
+      description.innerText=data.description;
+
+      var price=document.createElement("p")
+      price.innerText=data.price;
+
+      var btn=document.createElement("button")
+      btn.innerText="DELETE"
+      btn.style.backgroundColor="red";
+      btn.style.cursor="pointer";
+      btn.addEventListener("click",function(event){
+       
+       event.target.parentNode.remove();
+
+    })
+
+    parent.append(heading,Title,description, price,btn)
+     product.append(parent);
+
+   
+       }
+
+form.addEventListener("submit", function(event){
+  event.preventDefault();
+    
+  var data ={
+       Title:form.Title.value,
+       description:form.description.value,
+       price:form.price.value,
+       category:form.category.value,
+  }
+  display(data);
+//   console.log(data)
+})
+
+
+
+
+</script>
